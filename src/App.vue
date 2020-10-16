@@ -1,17 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home flex">
+    <img alt="Vue logo" src="./assets/logo.png">
+      <SideBar v-on:change-list-id="changeListId($event)" />
+      <TodoList />
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import SideBar from './components/SideBar'
+import TodoList from './components/TodoList.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SideBar,
+    TodoList,
+
+  },
+  data() {
+    return {
+      listId: 1,
+    };
+  },
+  methods: {
+    changeListId(id) {
+      this.listId = id;
+    }
   }
+
 }
+
 </script>
 
 <style>
