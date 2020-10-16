@@ -30,7 +30,7 @@
 import {store} from "../store";
 
 export default {
-  name: "TodoList.vue",
+  name: "TodoList",
   store,
   data() {
     return {

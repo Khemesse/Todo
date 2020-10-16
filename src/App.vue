@@ -1,19 +1,19 @@
 <template>
   <div class="home flex">
     <img alt="Vue logo" src="./assets/logo.png">
-      <SideBar v-on:change-list-id="changeListId($event)" />
+      <mySideBar v-on:change-list-id="changeListId($event)" />
       <TodoList />
     </div>
 </template>
 
 <script>
 
-import SideBar from './components/SideBar'
-import TodoList from './components/TodoList.vue'
+import mySideBar from './components/Sidebar'
+import TodoList from './components/TodoList'
 export default {
   name: 'App',
   components: {
-    SideBar,
+    mySideBar,
     TodoList,
 
   },

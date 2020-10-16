@@ -17,10 +17,10 @@
 </template>
 
 <script>
-import { store } from "./store/index.js";
+import { store } from "../store/index.js";
 
 export default {
-  name: "SideBar",
+  name: "mySideBar",
   data() {
     return {
       lists: store.state.lists,
